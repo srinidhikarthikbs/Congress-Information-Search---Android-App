@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="15dp"
+    >
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/legislator_view_details">
+
+        <!--<TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Srinidhi\n legislator View Details"
+            android:textAlignment="center"
+            android:padding="20dp"/>-->
+
+        <LinearLayout
+            android:id="@+id/favorites_and_social"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layoutDirection="rtl">
+
+            <ImageView
+                android:id="@+id/website"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:src="@mipmap/w"
+                android:contentDescription="Website_Legislator"/>
+            <ImageView
+                android:id="@+id/twitter"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:src="@mipmap/t"
+                android:contentDescription="Twitter_Legislator"/>
+            <ImageView
+                android:id="@+id/facebook"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:src="@mipmap/f"
+                android:contentDescription="Facebook_Legislator"/>
+            <ImageView
+                android:id="@+id/favorites_star"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:src="@mipmap/big_empty_star"
+                android:contentDescription="Favorites_Legislator_Star"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/legislator_image"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_gravity="center_horizontal"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            >
+            <ImageView
+                android:id="@+id/legislator_party_image"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@mipmap/r"
+                android:contentDescription="Party Image"/>
+            <TextView
+                android:id="@+id/legislator_party"
+                android:layout_margin="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Republican"
+                android:textSize="30sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/first_6_textviews"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical"
+            >
+
+            <include
+                layout="@layout/legislator_view_details_item"
+                android:id="@+id/legislator_name" />
+
+            <include
+                layout="@layout/legislator_view_details_item"
+                android:id="@+id/legislator_email"/>
+
+            <include
+                layout="@layout/legislator_view_details_item"
+                android:id="@+id/legislator_chamber"/>
+
+            <include
+                layout="@layout/legislator_view_details_item"
+                android:id="@+id/legislator_contact"/>
+
+            <include
+                layout="@layout/legislator_view_details_item"
+                android:id="@+id/legislator_start_term"/>
+
+            <include
+                layout="@layout/legislator_view_details_item"
+                android:id="@+id/legislator_end_term"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:id="@+id/key"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:layout_marginTop="10dp"
+                android:text="Term: "
+                />
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:layout_marginTop="10dp"
+                >
+                <ProgressBar
+                    android:id="@+id/progress_bar"
+                    style="@style/CustomProgressBarHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:progress="20"
+                    android:layoutDirection="rtl"
+                    />
+                <TextView
+                    android:id="@+id/progress_bar_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="20%"
+                    android:textColor="#000"
+                    android:textAlignment="center"/>
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/last_4_textviews"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="10dp">
+
+            <include
+                layout="@layout/legislator_view_details_item"
+                android:id="@+id/legislator_office"/>
+
+            <include
+                layout="@layout/legislator_view_details_item"
+                android:id="@+id/legislator_state"/>
+
+            <include
+                layout="@layout/legislator_view_details_item"
+                android:id="@+id/legislator_fax"/>
+
+            <include
+                layout="@layout/legislator_view_details_item"
+                android:id="@+id/legislator_birthday"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
+

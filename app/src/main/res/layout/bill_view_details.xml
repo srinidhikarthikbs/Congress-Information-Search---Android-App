@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="15dp"
+    >
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bill_view_details">
+
+        <LinearLayout
+            android:id="@+id/favorites_and_social"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layoutDirection="rtl">
+
+            <ImageView
+                android:id="@+id/favorites_star"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:src="@mipmap/big_empty_star"
+                android:contentDescription="Favorites_Legislator_Star"/>
+
+        </LinearLayout>
+
+        <include
+            layout="@layout/legislator_view_details_item"
+            android:id="@+id/bill_id"/>
+
+        <include
+            layout="@layout/legislator_view_details_item"
+            android:id="@+id/bill_title"/>
+
+        <include
+            layout="@layout/legislator_view_details_item"
+            android:id="@+id/bill_type"/>
+
+        <include
+            layout="@layout/legislator_view_details_item"
+            android:id="@+id/bill_sponsor"/>
+
+        <include
+            layout="@layout/legislator_view_details_item"
+            android:id="@+id/bill_chamber"/>
+
+        <include
+            layout="@layout/legislator_view_details_item"
+            android:id="@+id/bill_status"/>
+
+        <include
+            layout="@layout/legislator_view_details_item"
+            android:id="@+id/bill_introduced_on"/>
+
+        <include
+            layout="@layout/legislator_view_details_item"
+            android:id="@+id/bill_congress_url"/>
+
+        <include
+            layout="@layout/legislator_view_details_item"
+            android:id="@+id/bill_version_status"/>
+
+        <include
+            layout="@layout/legislator_view_details_item"
+            android:id="@+id/bill_url"/>
+
+
+
+    </LinearLayout>
+
+</ScrollView>
+
